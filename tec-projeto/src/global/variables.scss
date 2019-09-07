@@ -1,0 +1,45 @@
+// Padrao de cores
+$primary: purple;
+$secondary: white;
+$tertiary: #BDBDBD;
+
+// Media queries para responsividade de dispositivos
+// Utilizando mixins para chamar as funcoes nos arquivos .scss
+@mixin for-med-screen {
+  @media (min-width: 1280px) and (min-height: 720px) and (max-width: 1600px) and (max-height: 900px) {
+    @content;
+  }
+}
+
+@mixin for-tablet {
+  @media (min-width: 600px) and (min-height: 1024px) and (max-width: 1024px) and (max-height: 1366px) {
+    @content;
+  }
+}
+
+@mixin for-mobile {
+  @media (min-width: 320px) and (min-height: 480px) and (max-width: 414px) and (max-height: 846px) {
+    @content;
+  }
+}
+
+// Diretiva para adicionar uma imagem de fundo em um elemento
+@mixin background-image($url, $brightness:100%) {
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness($brightness);
+  }
+}

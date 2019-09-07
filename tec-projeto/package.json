@@ -1,0 +1,41 @@
+{
+  "name": "hut8-boiler-plate-front",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "create-functional-component": "scripts/create_functional_component.sh",
+    "create-class-component": "scripts/create_class_component.sh",
+    "create-container": "scripts/create_container.sh",
+    "create-helper": "scripts/create_helper.sh"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
+    "standard": "^13.0.2"
+  }
+}
