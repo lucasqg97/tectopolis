@@ -14,7 +14,7 @@ MongoClient.connect(keys.url, { useNewUrlParser: true }, (err, dtb) => {
   app.listen(PORT)
 })
 
-app.use(express.static('public'))
+app.use('/', express.static('../public'))
 app.use(bodyParser.json())
 
 /* app.use(

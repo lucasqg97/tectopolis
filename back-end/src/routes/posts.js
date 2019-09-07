@@ -1,15 +1,13 @@
 // const keys = require('./config/keys')
 // var ObjectID = require('mongodb').ObjectID
 
-const imgDefault = 'http://pageone.ph/wp-content/uploads/2017/04/2017-04-05-Gizmos-Say-Goodbye-To-The-Iconic-Twitter-Egg-Profile-.png'
 module.exports = function (app, db) {
   app.post('/posts', (req, res) => {
     console.log(req.body)
     let newPost = {
-      full_name: req.body.full_name,
-      arroba: req.body.arroba,
-      bio: req.body.bio,
-      imgLink: req.body.imgLink || imgDefault
+      title: req.body.title,
+      author: req.body.author,
+      body: req.body.body
     }
     db.collection('posts').insertOne(newPost, (err, results) => {
       if (err) {
